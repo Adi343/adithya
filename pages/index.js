@@ -1,10 +1,30 @@
-import Head from 'next/head'
-import Image from 'next/image'
-
 export default function Home() {
   return (
-    <div style={{display:"flex",alignItems:"cneter",justifyContent:"center",backgroundColor:"blue"}}>
-      Hello World
-    </div>
-  )
+    <main>
+      <section
+        style={{
+          height: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "space-between",
+          backgroundColor: "#075985",
+        }}
+      >
+        Hello World
+        <span>Test</span>
+      </section>
+      <section
+        style={{
+          height: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "red",
+        }}
+      >
+        Hello World
+      </section>
+    </main>
+  );
 }
