@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main>
@@ -22,7 +24,7 @@ export default function Home() {
             height: "500px",
             marginBottom: "100px",
             borderRadius: "10px",
-            border: "3px solid black",
+            // border: "3px solid black",
           }}
         >
           <div style={{ flex: 1.5 }}>
@@ -40,12 +42,33 @@ export default function Home() {
               // backgroundColor: "whitesmoke",
             }}
           >
-            <span style={{ fontSize: "1.5rem" }}>{`Hi There! `} </span>
+            <span style={{ fontSize: "1.5rem", fontWeight: "600" }}>
+              {`Hi There! `}{" "}
+            </span>
             <span
               style={{ fontSize: "1.25rem" }}
             >{`I am a full stack developer from Hyderabad.`}</span>
 
-            <span>{`Some of the projects I've worked on`}</span>
+            <span
+              style={{ fontSize: "1.25rem" }}
+            >{`Some of the technologies I've worked with are `}</span>
+
+            <span
+              style={{ fontSize: "1.25rem", fontWeight: "600" }}
+            >{`ReactJS,NextJS,Express,MongoDb,Android`}</span>
+            <span
+              style={{ fontSize: "1.25rem", fontWeight: "600" }}
+            >{`Javascript,Python,Go,Java`}</span>
+
+            <span>
+              {`Some of the `}{" "}
+              <Link href="/projects">
+                <a>
+                  <span style={{ textDecoration: "underline" }}>Projects</span>
+                </a>
+              </Link>
+              {` I've worked on!`}
+            </span>
           </div>
         </div>
         <span>Made with NextJS</span>
