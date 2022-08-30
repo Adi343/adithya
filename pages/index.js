@@ -18,17 +18,29 @@ export default function Home() {
         </span>
         {/* Profile Card */}
         <div
-          style={{
-            display: "flex",
-            width: "600px",
-            height: "500px",
-            marginBottom: "100px",
-            borderRadius: "10px",
-            // border: "3px solid black",
-          }}
+          // style={{
+          //   display: "flex",
+          //   alignItems: "center",
+          //   justifyContent: "end",
+          //   width: "600px",
+          //   height: "500px",
+          //   marginBottom: "100px",
+          //   borderRadius: "10px",
+          //   backgroundColor: "green",
+          //   // border: "3px solid black",
+          // }}
+          className="profileCard"
         >
-          <div style={{ flex: 1.5 }}>
-            <span>Profile Card</span>
+          <div className="profilePhoto">
+            {/* <span>Profile Card</span> */}
+            <div
+              style={{
+                width: "100px",
+                height: "100px",
+                borderRadius: "10px",
+                backgroundColor: "black",
+              }}
+            ></div>
           </div>
 
           <div
@@ -47,7 +59,7 @@ export default function Home() {
             </span>
             <span
               style={{ fontSize: "1.25rem" }}
-            >{`I am a full stack developer from Hyderabad.`}</span>
+            >{`I'm Adithya, a full stack developer from Hyderabad.`}</span>
 
             <span
               style={{ fontSize: "1.25rem" }}
