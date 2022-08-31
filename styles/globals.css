@@ -5,8 +5,11 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Oswald", sans-serif;
-  height: 100vh;
-  background-color: black;
+  min-height: 100vh;
+  /* min-width: 100vw; */
+  overflow: auto;
+  overflow-x: hidden;
+  background-color: #0c4a6e;
 }
 
 a {

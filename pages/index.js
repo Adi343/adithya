@@ -2,10 +2,15 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
-      <section
+    <div
+      style={{
+        height: "100vh",
+      }}
+    >
+      <div
         style={{
           height: "100vh",
+          width: "100vw",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -84,7 +89,7 @@ export default function Home() {
           </div>
         </div>
         <span>Made with NextJS</span>
-      </section>
+      </div>
       {/* <section
         style={{
           height: "100vh",
@@ -96,6 +101,6 @@ export default function Home() {
       >
         Hello World
       </section> */}
-    </main>
+    </div>
   );
 }
