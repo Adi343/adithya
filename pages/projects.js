@@ -50,7 +50,10 @@ export default function projects() {
           }}
         >
           {projectsList.map((item) => (
-            <ProjectCard projectName={item.projectName} />
+            <ProjectCard
+              projectName={item.projectName}
+              key={item.projectName}
+            />
           ))}
         </div>
       </div>
