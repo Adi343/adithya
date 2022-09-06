@@ -81,10 +81,19 @@ export default function Home() {
               {`Some of the `}{" "}
               <Link href="/projects">
                 <a>
-                  <span style={{ textDecoration: "underline" }}>Projects</span>
+                  <span
+                    style={{
+                      textDecoration: "underline",
+                      fontSize: "1.25rem",
+                      color: "#0492c2",
+                    }}
+                  >
+                    Projects
+                  </span>
                 </a>
               </Link>
               {` I've worked on!`}
+              Contact
             </span>
           </div>
         </div>

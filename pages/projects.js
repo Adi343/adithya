@@ -1,3 +1,21 @@
+const projectsList = [
+  {
+    projectName: "eCommerce Store",
+  },
+  {
+    projectName: "Real Time Chat",
+  },
+  {
+    projectName: "Portfolio",
+  },
+  {
+    projectName: "IoT app",
+  },
+  {
+    projectName: "Task Manager",
+  },
+];
+
 export default function projects() {
   return (
     <div
@@ -31,16 +49,9 @@ export default function projects() {
             alignItems: "center",
           }}
         >
-          <ProjectCard />
-          <div
-            style={{
-              display: "flex",
-            }}
-          >
-            {[1, 2, 3, 4, 5].map((item) => (
-              <CustomButton item={item} />
-            ))}
-          </div>
+          {projectsList.map((item) => (
+            <ProjectCard projectName={item.projectName} />
+          ))}
         </div>
       </div>
       <div>
@@ -50,36 +61,20 @@ export default function projects() {
   );
 }
 
-const ProjectCard = () => {
+const ProjectCard = (props) => {
   return (
     <div
       style={{
-        height: "110px",
+        height: "90px",
         width: "750px",
+        padding: "5px",
+        marginBottom: "3px",
         borderRadius: "10px",
         border: "2px solid black",
+        backgroundColor: "black",
       }}
     >
-      <span>Hello World</span>
-    </div>
-  );
-};
-
-const CustomButton = (props) => {
-  return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "30px",
-        height: "30px",
-        border: "3px solid black",
-        borderRadius: "20px",
-        margin: "3px",
-      }}
-    >
-      <span style={{}}>{props.item}</span>
+      <span style={{ color: "#0c4a6e" }}>{props.projectName}</span>
     </div>
   );
 };
