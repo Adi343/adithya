@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import photograph from "../public/adithya.png";
 
 export default function Home() {
   return (
@@ -38,14 +40,24 @@ export default function Home() {
         >
           <div className="profilePhoto">
             {/* <span>Profile Card</span> */}
-            <div
+            {/* <img
+              src="photo.src"
               style={{
                 width: "100px",
                 height: "100px",
                 borderRadius: "10px",
                 backgroundColor: "black",
               }}
-            ></div>
+            /> */}
+            {photograph !== undefined ? (
+              <Image
+                src={photograph}
+                width="100px"
+                height="100px"
+                borderRadius="10px"
+                className="photo"
+              />
+            ) : null}
           </div>
 
           <div

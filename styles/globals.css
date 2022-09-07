@@ -38,6 +38,10 @@ a {
   margin-right: 20px;
 }
 
+.photo {
+  border-radius: 10px;
+}
+
 .linkStyle {
   font-size: 1.25rem;
   color: #0000ee;

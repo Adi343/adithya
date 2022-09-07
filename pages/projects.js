@@ -93,6 +93,8 @@ const ProjectCard = (props) => {
         {props.projectName}
       </span>
       <span style={{}}>{props.projectDescription}</span>
+
+      <span>Built With {"Tech1 Tech2 Tech3"}</span>
     </div>
   );
 };
