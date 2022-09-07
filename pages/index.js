@@ -15,7 +15,7 @@ export default function Home() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "space-between",
-          backgroundColor: "#0c4a6e",
+          backgroundColor: "white",
         }}
       >
         <span style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
@@ -80,20 +80,18 @@ export default function Home() {
             <span>
               {`Some of the `}{" "}
               <Link href="/projects">
-                <a>
-                  <span
-                    style={{
-                      textDecoration: "underline",
-                      fontSize: "1.25rem",
-                      color: "#0492c2",
-                    }}
-                  >
-                    Projects
-                  </span>
+                <a
+                  // style={{
+                  //   // textDecoration: "underline",
+                  //   fontSize: "1.25rem",
+                  //   color: "#0000EE",
+                  // }}
+                  className="linkStyle"
+                >
+                  Projects
                 </a>
               </Link>
               {` I've worked on!`}
-              Contact
             </span>
           </div>
         </div>

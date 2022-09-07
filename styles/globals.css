@@ -9,7 +9,7 @@ body {
   /* min-width: 100vw; */
   overflow: auto;
   overflow-x: hidden;
-  background-color: #0c4a6e;
+  /* background-color: #0c4a6e; */
 }
 
 a {
@@ -36,6 +36,15 @@ a {
   display: flex;
   flex-direction: row-reverse;
   margin-right: 20px;
+}
+
+.linkStyle {
+  font-size: 1.25rem;
+  color: #0000ee;
+}
+
+.linkStyle:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 500px) {
