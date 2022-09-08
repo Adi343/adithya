@@ -1,19 +1,24 @@
+import Image from "next/image";
+import githubIcon from "../public/GitHub-Mark-64px.png";
+
 const projectsList = [
   {
-    projectName: "Live Chat",
-    projectDescription:
+    name: "Live Chat",
+    description:
       "Chat application to show live chat like apps such as YouTube,Twitch etc",
     tech: ["React", "Express", "Web Sockets"],
+    link: "",
   },
   {
-    projectName: "Portfolio",
-    projectDescription: "Personal website about me to showcase my projects.",
+    name: "Portfolio",
+    description: "Personal website about me to showcase my projects.",
     tech: ["React", "NextJS"],
+    link: "https://github.com/Adi343/adithya",
   },
 
   {
-    projectName: "IoT app",
-    projectDescription:
+    name: "IoT app",
+    description:
       "Use Face Recognition technology to detect intruder. An Android App provides user the ability to control his IoT devices and view detailed analytics of the devices.",
     tech: [
       "Java",
@@ -23,16 +28,19 @@ const projectsList = [
       "Python",
       "Raspberry Pi",
     ],
+    link: "",
   },
   {
-    projectName: "Task Manager",
-    projectDescription:
+    name: "Task Manager",
+    description:
       "Manage your daily task and projects in a gamified system. Users can earn achievements and progress their level by finishing their tasks on time.",
     tech: ["Java", "Android", "SQLite"],
+    link: "",
   },
   {
-    projectName: "Recipe Recommendation App",
+    name: "Recipe Recommendation App",
     tech: ["Java", "Android"],
+    link: "",
   },
 ];
 
@@ -71,10 +79,11 @@ export default function projects() {
         >
           {projectsList.map((item) => (
             <ProjectCard
-              projectName={item.projectName}
-              projectDescription={item.projectDescription}
+              name={item.name}
+              description={item.description}
               tech={[...item.tech]}
-              key={item.projectName}
+              link={item.link}
+              key={item.name}
             />
           ))}
         </div>
@@ -90,9 +99,9 @@ const ProjectCard = (props) => {
   return (
     <div className="projectCard">
       <span style={{ fontWeight: "bold", fontSize: "1.25rem" }}>
-        {props.projectName}
+        {props.name}
       </span>
-      <span style={{ textAlign: "center" }}>{props.projectDescription}</span>
+      <span style={{ textAlign: "center" }}>{props.description}</span>
 
       <div>
         <span>Built With </span>
@@ -103,7 +112,37 @@ const ProjectCard = (props) => {
           </span>
         ))}
       </div>
-      <span>Check out code at</span>
+
+      {props.link !== "" ? (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "150px",
+            height: "50px",
+          }}
+        >
+          <span>Check out code at</span>
+          <a
+            href={props.link}
+            style={{
+              paddingTop: "5px",
+              marginLeft: "5px",
+            }}
+          >
+            <Image
+              width={20}
+              height={20}
+              src={githubIcon}
+              style={{
+                display: "inline-block",
+                verticalAlign: "bottom",
+              }}
+            />
+          </a>
+        </div>
+      ) : null}
     </div>
   );
 };
