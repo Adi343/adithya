@@ -49,6 +49,7 @@ a {
 
 .linkStyle:hover {
   text-decoration: underline;
+  -webkit-text-decoration: underline;
 }
 
 .projectCard {
