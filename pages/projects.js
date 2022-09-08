@@ -35,12 +35,13 @@ const projectsList = [
     description:
       "Manage your daily task and projects in a gamified system. Users can earn achievements and progress their level by finishing their tasks on time.",
     tech: ["Java", "Android", "SQLite"],
-    link: "",
+    link: "https://github.com/Adi343/TM_v3",
   },
   {
     name: "Recipe Recommendation App",
+    description: "Search for your favourite recipes and save them in your app.",
     tech: ["Java", "Android"],
-    link: "",
+    link: "https://github.com/Adi343/FoodApp",
   },
 ];
 
@@ -104,16 +105,23 @@ const ProjectCard = (props) => {
       <span style={{ textAlign: "center" }}>{props.description}</span>
 
       <div>
-        <span>Built With </span>
+        <span style={{ fontWeight: "bold" }}>Built With </span>
 
         {props.tech.map((item) => (
-          <span style={{ margin: "3px", fontWeight: "bold" }} key={item}>
+          <span
+            style={{
+              margin: "3px",
+              fontWeight: "semi-bold",
+              textDecoration: "underline",
+            }}
+            key={item}
+          >
             {item}
           </span>
         ))}
       </div>
 
-      {props.link !== "" ? (
+      {props.link !== "" && typeof props.link === "" ? (
         <div
           style={{
             display: "flex",
@@ -126,6 +134,7 @@ const ProjectCard = (props) => {
           <span>Check out code at</span>
           <a
             href={props.link}
+            target="_blank"
             style={{
               paddingTop: "5px",
               marginLeft: "5px",
