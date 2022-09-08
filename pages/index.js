@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import photograph from "../public/adithya.png";
 
 export default function Home() {
   return (
@@ -15,7 +17,7 @@ export default function Home() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "space-between",
-          backgroundColor: "#0c4a6e",
+          backgroundColor: "white",
         }}
       >
         <span style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
@@ -38,14 +40,24 @@ export default function Home() {
         >
           <div className="profilePhoto">
             {/* <span>Profile Card</span> */}
-            <div
+            {/* <img
+              src="photo.src"
               style={{
                 width: "100px",
                 height: "100px",
                 borderRadius: "10px",
                 backgroundColor: "black",
               }}
-            ></div>
+            /> */}
+            {photograph !== undefined ? (
+              <Image
+                src={photograph}
+                width="100px"
+                height="100px"
+                borderRadius="10px"
+                className="photo"
+              />
+            ) : null}
           </div>
 
           <div
@@ -80,20 +92,18 @@ export default function Home() {
             <span>
               {`Some of the `}{" "}
               <Link href="/projects">
-                <a>
-                  <span
-                    style={{
-                      textDecoration: "underline",
-                      fontSize: "1.25rem",
-                      color: "#0492c2",
-                    }}
-                  >
-                    Projects
-                  </span>
+                <a
+                  // style={{
+                  //   // textDecoration: "underline",
+                  //   fontSize: "1.25rem",
+                  //   color: "#0000EE",
+                  // }}
+                  className="linkStyle"
+                >
+                  Projects
                 </a>
               </Link>
               {` I've worked on!`}
-              Contact
             </span>
           </div>
         </div>
