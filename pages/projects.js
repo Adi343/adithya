@@ -98,7 +98,9 @@ const ProjectCard = (props) => {
         <span>Built With </span>
 
         {props.tech.map((item) => (
-          <span style={{ margin: "3px", fontWeight: "bold" }}>{item}</span>
+          <span style={{ margin: "3px", fontWeight: "bold" }} key={item}>
+            {item}
+          </span>
         ))}
       </div>
       <span>Check out code at</span>
