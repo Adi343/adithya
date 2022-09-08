@@ -3,24 +3,36 @@ const projectsList = [
     projectName: "Live Chat",
     projectDescription:
       "Chat application to show live chat like apps such as YouTube,Twitch etc",
+    tech: ["React", "Express", "Web Sockets"],
   },
   {
     projectName: "Portfolio",
-    projectDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis justo enim, a eleifend libero venenatis vitae. Vestibulum lobortis sodales mauris vel viverra. Suspendisse ornare id erat nec varius. Morbi eu lectus vel ipsum facilisis semper. In at magna id odio fringilla porta et vel felis. Interdum et malesuada fames.",
+    projectDescription: "Personal website about me to showcase my projects.",
+    tech: ["React", "NextJS"],
   },
-  {
-    projectName: "Recipe Recommendation App",
-  },
+
   {
     projectName: "IoT app",
     projectDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis justo enim, a eleifend libero venenatis vitae. Vestibulum lobortis sodales mauris vel viverra. Suspendisse ornare id erat nec varius. Morbi eu lectus vel ipsum facilisis semper. In at magna id odio fringilla porta et vel felis. Interdum et malesuada fames.",
+      "Use Face Recognition technology to detect intruder. An Android App provides user the ability to control his IoT devices and view detailed analytics of the devices.",
+    tech: [
+      "Java",
+      "Android",
+      "Machine Learning",
+      "AWS",
+      "Python",
+      "Raspberry Pi",
+    ],
   },
   {
     projectName: "Task Manager",
     projectDescription:
       "Manage your daily task and projects in a gamified system. Users can earn achievements and progress their level by finishing their tasks on time.",
+    tech: ["Java", "Android", "SQLite"],
+  },
+  {
+    projectName: "Recipe Recommendation App",
+    tech: ["Java", "Android"],
   },
 ];
 
@@ -61,6 +73,7 @@ export default function projects() {
             <ProjectCard
               projectName={item.projectName}
               projectDescription={item.projectDescription}
+              tech={[...item.tech]}
               key={item.projectName}
             />
           ))}
@@ -75,26 +88,20 @@ export default function projects() {
 
 const ProjectCard = (props) => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        height: "500px",
-        width: "750px",
-        padding: "10px",
-        marginBottom: "3px",
-        borderRadius: "10px",
-        border: "2px solid black",
-        backgroundColor: "white",
-      }}
-    >
+    <div className="projectCard">
       <span style={{ fontWeight: "bold", fontSize: "1.25rem" }}>
         {props.projectName}
       </span>
-      <span style={{}}>{props.projectDescription}</span>
+      <span style={{ textAlign: "center" }}>{props.projectDescription}</span>
 
-      <span>Built With {"Tech1 Tech2 Tech3"}</span>
+      <div>
+        <span>Built With </span>
+
+        {props.tech.map((item) => (
+          <span style={{ margin: "3px", fontWeight: "bold" }}>{item}</span>
+        ))}
+      </div>
+      <span>Check out code at</span>
     </div>
   );
 };
