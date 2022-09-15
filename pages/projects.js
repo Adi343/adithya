@@ -1,19 +1,34 @@
 import Image from "next/image";
 import githubIcon from "../public/GitHub-Mark-64px.png";
+import eComImage from "../public/eCommerceApp.png";
+import portfolio from "../public/portfolio.png";
+import realTimeChat from "../public/realTimeChat.png";
+import iotApp from "../public/collegeProject.png";
+import taskManager from "../public/knockList.png";
+import foodApp from "../public/foodApp.png";
 
 const projectsList = [
+  {
+    name: "eCommerce App",
+    description: "",
+    tech: ["NextJS", "Prisma", "MySQL"],
+    link: "https://github.com/Adi343/ecommerce-app-nextjs",
+    projectLink: "https://ecommerce-app-nextjs-cyan.vercel.app/",
+  },
   {
     name: "Live Chat",
     description:
       "Chat application to show live chat like apps such as YouTube,Twitch etc",
     tech: ["React", "Express", "Web Sockets"],
     link: "",
+    projectLink: "",
   },
   {
     name: "Portfolio",
     description: "Personal website about me to showcase my projects.",
     tech: ["React", "NextJS"],
     link: "https://github.com/Adi343/adithya",
+    projectLink: "https://adithya-kappa.vercel.app/",
   },
 
   {
@@ -29,6 +44,7 @@ const projectsList = [
       "Raspberry Pi",
     ],
     link: "",
+    projectLink: "",
   },
   {
     name: "Task Manager",
@@ -36,12 +52,14 @@ const projectsList = [
       "Manage your daily task and projects in a gamified system. Users can earn achievements and progress their level by finishing their tasks on time.",
     tech: ["Java", "Android", "SQLite"],
     link: "https://github.com/Adi343/TM_v3",
+    projectLink: "",
   },
   {
     name: "Recipe Recommendation App",
     description: "Search for your favourite recipes and save them in your app.",
     tech: ["Java", "Android"],
     link: "https://github.com/Adi343/FoodApp",
+    projectLink: "",
   },
 ];
 
@@ -85,6 +103,8 @@ export default function projects() {
               tech={[...item.tech]}
               link={item.link}
               key={item.name}
+              image={item.image}
+              projectLink={item.projectLink}
             />
           ))}
         </div>
@@ -121,14 +141,14 @@ const ProjectCard = (props) => {
         ))}
       </div>
 
-      {props.link !== "" && typeof props.link === "" ? (
+      {props.link !== "" ? (
         <div
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             width: "150px",
-            height: "50px",
+            // height: "50px",
           }}
         >
           <span>Check out code at</span>
@@ -152,6 +172,65 @@ const ProjectCard = (props) => {
           </a>
         </div>
       ) : null}
+
+      {props.projectLink !== "" ? (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "175px",
+            // height: "50px",
+          }}
+        >
+          <span>Check project live at </span>
+          <a
+            href={props.projectLink}
+            target="_blank"
+            style={{
+              marginLeft: "5px",
+              textDecoration: "underline",
+              color: "blue",
+            }}
+          >
+            Here
+          </a>
+        </div>
+      ) : null}
+
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          borderRadius: "1%",
+          overflow: "hidden",
+          width: "700px",
+          height: "425px",
+          border: "5px solid black",
+          backgroundColor: "black",
+        }}
+      >
+        {props.name === "eCommerce App" ? (
+          <Image src={eComImage} width={700} height={425} />
+        ) : null}
+        {props.name === "Live Chat" ? (
+          <Image src={realTimeChat} width={700} height={425} />
+        ) : null}
+        {props.name === "Portfolio" ? (
+          <Image src={portfolio} width={700} height={425} />
+        ) : null}
+        {props.name === "IoT app" ? (
+          <Image src={iotApp} width={180} height={350} />
+        ) : null}
+        {props.name === "Task Manager" ? (
+          <Image src={taskManager} width={180} height={350} />
+        ) : null}
+
+        {props.name === "Recipe Recommendation App" ? (
+          <Image src={foodApp} width={180} height={350} />
+        ) : null}
+      </div>
     </div>
   );
 };
