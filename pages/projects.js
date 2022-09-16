@@ -223,6 +223,7 @@ const ProjectCard = (props) => {
           <a
             href={props.projectLink}
             target="_blank"
+            rel="noopener"
             style={{
               marginLeft: "5px",
               textDecoration: "underline",
