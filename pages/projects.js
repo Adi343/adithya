@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import githubIcon from "../public/GitHub-Mark-64px.png";
 import eComImage from "../public/eCommerceApp.png";
 import portfolio from "../public/portfolio.png";
@@ -76,7 +77,7 @@ export default function projects() {
       }}
     >
       <span style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-        Adithya Pantangi
+        <Link href="/">Adithya Pantangi</Link>
       </span>
 
       <div
@@ -123,6 +124,40 @@ const ProjectCard = (props) => {
         {props.name}
       </span>
       <span style={{ textAlign: "center" }}>{props.description}</span>
+
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          borderRadius: "1%",
+          overflow: "hidden",
+          width: "700px",
+          height: "425px",
+          border: "5px solid black",
+          backgroundColor: "black",
+        }}
+      >
+        {props.name === "eCommerce App" ? (
+          <Image src={eComImage} width={700} height={425} />
+        ) : null}
+        {props.name === "Live Chat" ? (
+          <Image src={realTimeChat} width={700} height={425} />
+        ) : null}
+        {props.name === "Portfolio" ? (
+          <Image src={portfolio} width={700} height={425} />
+        ) : null}
+        {props.name === "IoT app" ? (
+          <Image src={iotApp} width={180} height={350} />
+        ) : null}
+        {props.name === "Task Manager" ? (
+          <Image src={taskManager} width={180} height={350} />
+        ) : null}
+
+        {props.name === "Recipe Recommendation App" ? (
+          <Image src={foodApp} width={180} height={350} />
+        ) : null}
+      </div>
 
       <div>
         <span style={{ fontWeight: "bold" }}>Built With </span>
@@ -197,40 +232,6 @@ const ProjectCard = (props) => {
           </a>
         </div>
       ) : null}
-
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          borderRadius: "1%",
-          overflow: "hidden",
-          width: "700px",
-          height: "425px",
-          border: "5px solid black",
-          backgroundColor: "black",
-        }}
-      >
-        {props.name === "eCommerce App" ? (
-          <Image src={eComImage} width={700} height={425} />
-        ) : null}
-        {props.name === "Live Chat" ? (
-          <Image src={realTimeChat} width={700} height={425} />
-        ) : null}
-        {props.name === "Portfolio" ? (
-          <Image src={portfolio} width={700} height={425} />
-        ) : null}
-        {props.name === "IoT app" ? (
-          <Image src={iotApp} width={180} height={350} />
-        ) : null}
-        {props.name === "Task Manager" ? (
-          <Image src={taskManager} width={180} height={350} />
-        ) : null}
-
-        {props.name === "Recipe Recommendation App" ? (
-          <Image src={foodApp} width={180} height={350} />
-        ) : null}
-      </div>
     </div>
   );
 };
