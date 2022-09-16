@@ -190,6 +190,7 @@ const ProjectCard = (props) => {
           <a
             href={props.link}
             target="_blank"
+            rel="noopener"
             style={{
               paddingTop: "5px",
               marginLeft: "5px",
