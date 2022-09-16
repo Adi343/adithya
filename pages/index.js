@@ -84,7 +84,7 @@ export default function Home() {
 
             <span
               style={{ fontSize: "1.25rem", fontWeight: "600" }}
-            >{`ReactJS,NextJS,Express,MongoDb,Android`}</span>
+            >{`ReactJS,NextJS,NodeJS,Express,MongoDb,Android`}</span>
             <span
               style={{ fontSize: "1.25rem", fontWeight: "600" }}
             >{`Javascript,Python,Go,Java`}</span>
