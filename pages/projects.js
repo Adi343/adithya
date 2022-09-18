@@ -11,7 +11,8 @@ import foodApp from "../public/foodApp.png";
 const projectsList = [
   {
     name: "eCommerce App",
-    description: "",
+    description:
+      "A basic eCommerce app powered by React,Redux,NextJS,Prisma and MySQL",
     tech: ["NextJS", "Prisma", "MySQL"],
     link: "https://github.com/Adi343/ecommerce-app-nextjs",
     projectLink: "https://ecommerce-app-nextjs-cyan.vercel.app/",
