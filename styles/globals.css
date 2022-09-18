@@ -43,7 +43,7 @@ a {
 }
 
 .linkStyle {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #0000ee;
 }
 
@@ -56,7 +56,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 500px;
+  height: 600px;
   width: 750px;
   padding: 20px;
   margin-bottom: 10px;
