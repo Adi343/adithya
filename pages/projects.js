@@ -190,7 +190,7 @@ const ProjectCard = (props) => {
           <a
             href={props.link}
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
             style={{
               paddingTop: "5px",
               marginLeft: "5px",
@@ -223,7 +223,7 @@ const ProjectCard = (props) => {
           <a
             href={props.projectLink}
             target="_blank"
-            rel="noopener"
+            rel="noreferrer"
             style={{
               marginLeft: "5px",
               textDecoration: "underline",
