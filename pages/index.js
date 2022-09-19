@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import photograph from "../public/adithya.png";
+import githubIcon from "../public/GitHub-Mark-64px.png";
 
 export default function Home() {
   return (
@@ -20,24 +21,39 @@ export default function Home() {
           backgroundColor: "white",
         }}
       >
-        <span style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-          Adithya Pantangi
-        </span>
-        {/* Profile Card */}
         <div
-          // style={{
-          //   display: "flex",
-          //   alignItems: "center",
-          //   justifyContent: "end",
-          //   width: "600px",
-          //   height: "500px",
-          //   marginBottom: "100px",
-          //   borderRadius: "10px",
-          //   backgroundColor: "green",
-          //   // border: "3px solid black",
-          // }}
-          className="profileCard"
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-between",
+          }}
         >
+          <span style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
+            Adithya Pantangi
+          </span>
+
+          <a
+            href={"https://github.com/Adi343"}
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              paddingTop: "5px",
+              marginLeft: "5px",
+            }}
+          >
+            <Image
+              width={32}
+              height={32}
+              src={githubIcon}
+              style={{
+                display: "inline-block",
+                verticalAlign: "bottom",
+              }}
+            />
+          </a>
+        </div>
+        {/* Profile Card */}
+        <div className="profileCard">
           <div className="profilePhoto">
             {/* <span>Profile Card</span> */}
             {/* <img
@@ -68,7 +84,6 @@ export default function Home() {
               alignItems: "start",
               justifyContent: "center",
               borderRadius: "10px",
-              // backgroundColor: "whitesmoke",
             }}
           >
             <span style={{ fontSize: "1.5rem", fontWeight: "600" }}>
@@ -92,16 +107,7 @@ export default function Home() {
             <span>
               {`Some of the `}{" "}
               <Link href="/projects">
-                <a
-                  // style={{
-                  //   // textDecoration: "underline",
-                  //   fontSize: "1.25rem",
-                  //   color: "#0000EE",
-                  // }}
-                  className="linkStyle"
-                >
-                  Projects
-                </a>
+                <a className="linkStyle">Projects</a>
               </Link>
               {` I've worked on!`}
             </span>
