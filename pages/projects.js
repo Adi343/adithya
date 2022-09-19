@@ -126,19 +126,7 @@ const ProjectCard = (props) => {
       </span>
       <span style={{ textAlign: "center" }}>{props.description}</span>
 
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          borderRadius: "1%",
-          overflow: "hidden",
-          width: "700px",
-          height: "425px",
-          border: "5px solid black",
-          backgroundColor: "black",
-        }}
-      >
+      <div className="imageCard">
         {props.name === "eCommerce App" ? (
           <Image src={eComImage} width={700} height={425} />
         ) : null}

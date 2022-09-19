@@ -65,6 +65,18 @@ a {
   background-color: white;
 }
 
+.imageCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1%;
+  overflow: "hidden";
+  width: 700px;
+  height: 425px;
+  border: 5px solid black;
+  background-color: black;
+}
+
 @media screen and (max-width: 500px) {
   .profileCard {
     flex-direction: column;
@@ -77,5 +89,9 @@ a {
   .projectCard {
     height: 300px;
     width: 300px;
+  }
+
+  .imageCard {
+    display: none;
   }
 }
