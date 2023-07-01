@@ -115,7 +115,19 @@ export default function Home() {
             </span>
           </div>
         </div>
-        <span>Made with NextJS</span>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <span>Made with NextJS</span>
+
+          <Link href="https://heropatterns.com/">
+            <a>Background pattern by Steve Schoger</a>
+          </Link>
+        </div>
       </div>
       {/* <section
         style={{
